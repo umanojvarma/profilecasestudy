@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manoj Varma - Interactive Case Studies</title>
+    <title>Manoj Varma - Senior Product Leader & AI Specialist</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,38 +53,65 @@
             text-decoration: underline;
         }
 
-        .summary-section {
+        section {
             padding: 30px;
             border-bottom: 1px solid #e0e0e0;
-            text-align: center;
         }
-        .summary-section h2 {
+        section:last-of-type {
+            border-bottom: none;
+        }
+        h2 {
             color: #0056b3;
             font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h3 {
+            color: #007bff;
+            font-size: 1.8em;
             margin-bottom: 15px;
+            border-bottom: 1px dashed #cfe2ff;
+            padding-bottom: 10px;
         }
-        .summary-section p {
-            font-size: 1.15em;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #555;
+        p {
+            margin-bottom: 10px;
+            font-size: 1.05em;
         }
-
-        .case-studies {
-            padding: 30px;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
         }
-        .case-studies h2 {
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        ul li::before {
+            content: '•'; /* Changed from checkmark for general lists */
+            color: #007bff; /* Changed color */
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .highlight {
+            font-weight: bold;
             color: #0056b3;
-            font-size: 2.2em;
-            text-align: center;
-            margin-bottom: 30px;
         }
 
+        /* Specific styles for Case Studies */
+        .case-studies {
+            padding-top: 0; /* Adjust padding due to header */
+            border-bottom: 1px solid #e0e0e0;
+        }
         .tab-buttons {
             display: flex;
             justify-content: center;
             margin-bottom: 30px;
             border-bottom: 2px solid #e0e0e0;
+            background-color: #f8f9fa;
+            padding-top: 20px;
         }
         .tab-button {
             background-color: #e9ecef;
@@ -99,7 +126,7 @@
             border-top-right-radius: 8px;
             margin: 0 5px;
             position: relative;
-            top: 2px; /* For the illusion of sitting on the border */
+            top: 2px;
         }
         .tab-button:hover {
             background-color: #dee2e6;
@@ -136,23 +163,9 @@
             margin-bottom: 10px;
             font-size: 1.05em;
         }
-        .case-study-section ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
-        .case-study-section ul li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 8px;
-            font-size: 1.05em;
-        }
         .case-study-section ul li::before {
-            content: '✓';
+            content: '✓'; /* Changed back to checkmark for case study specifics */
             color: #28a745;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
         }
         .impact-highlight {
             background-color: #e9f7ef;
@@ -189,6 +202,42 @@
             font-size: 0.9em;
         }
 
+        /* General sections */
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            padding-left: 0; /* Reset for general list styling */
+        }
+        .experience-item ul li::before {
+            content: '–';
+            color: #555;
+        }
+        .meta-info {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: -10px; /* Adjust spacing */
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .skills-grid div h4 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .skills-grid ul {
+            margin: 0;
+            padding: 0;
+        }
+        .skills-grid ul li {
+            font-size: 1em;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -211,13 +260,47 @@
             </div>
         </header>
 
-        <section class="summary-section">
-            <h2>Driving Product Excellence with AI & Data</h2>
-            <p>Leveraging <strong>15+ years of expertise</strong>, I specialize in crafting and executing innovative product strategies that deliver significant business growth. My passion lies in harnessing advanced analytics and cutting-edge <span class="highlight">Generative AI and multi-agent architectures</span> to achieve Product-Market Fit and lead successful Go-to-Market initiatives. This page highlights my hands-on experience in building transformative AI products.</p>
+        <section id="professional-summary">
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <p>Highly accomplished Senior Product Leader with <span class="highlight">19+ years of experience</span> (started 2005) driving innovative, data-driven product strategies and execution for global fintech and HCM platforms. Proven track record in leveraging advanced analytics, user behavior insights (Pendo), and automation to deliver significant business growth, with a strong focus on achieving Product-Market Fit and executing successful Go-to-Market strategies. Complemented by deep expertise in <span class="highlight">Generative AI and multi-agent architectures</span> (developed through personal projects), notably leading the award-winning "TaxEase" AI Hackathon project and building "CompeteBot," an agentic AI solution for competitive analysis. Expert in product lifecycle management, rapid prototyping, and cross-functional leadership in dynamic, high-growth environments.</p>
         </section>
 
-        <section class="case-studies">
-            <h2>Interactive AI Case Studies</h2>
+        <section id="core-competencies">
+            <h2>CORE COMPETENCIES</h2>
+            <div class="skills-grid">
+                <div>
+                    <h4>Product Leadership</h4>
+                    <ul>
+                        <li>Product Strategy & Life Cycle Management</li>
+                        <li>Product-Market Fit (PMF) & Validation</li>
+                        <li>Go-to-Market (GTM) Strategy & Execution</li>
+                        <li>Agile & Lean Delivery</li>
+                        <li>Cross-functional Team Leadership</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>AI & Innovation</h4>
+                    <ul>
+                        <li>Generative AI & Multi-Agent Architecture Design</li>
+                        <li>AI Agent Orchestration (Langflow, Planner/Researcher/Executor Agents)</li>
+                        <li>LLM Model Training & Optimization (Ollama, top-k, top-p, temperature)</li>
+                        <li>Rapid Prototyping & Iteration (Replit, Lovable, Figma Make)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Data & Digital Transformation</h4>
+                    <ul>
+                        <li>Financial Automation & Optimization</li>
+                        <li>Digital Transformation & Platform Strategy</li>
+                        <li>Workflow Automation & Process Optimization</li>
+                        <li>Data-driven Decision Making, User Analytics (Pendo), & Experimentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-studies" id="ai-product-innovation">
+            <h2>AI PRODUCT INNOVATION & ACHIEVEMENTS</h2>
 
             <div class="tab-buttons">
                 <button class="tab-button active" data-tab="taxease">TaxEase: AI Tax Filing Assistant</button>
@@ -279,6 +362,126 @@
             </div>
         </section>
 
+        <section id="professional-experience">
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            <div class="experience-item">
+                <h3>Senior Product Manager, ADP</h3>
+                <span class="meta-info">Mar 2022 – Present | Hyderabad, India</span>
+                <ul>
+                    <li>Led product strategy and roadmap for key payroll and HR platforms impacting millions of users, leveraging Pendo insights to understand user pulse and drive a <span class="highlight">35% operational efficiency boost</span> through advanced feature development and process optimization.</li>
+                    <li>Spearheaded automation initiatives using advanced coding practices, resulting in a significant reduction in manual processing time by X% and improved data accuracy for Y critical HR workflows.</li>
+                    <li>Pioneered data-driven experimentation frameworks to optimize product intelligence, informing key strategic decisions and elevating user engagement by Z% on new features.</li>
+                    <li>Managed complex stakeholder relationships across engineering, sales, sales operations, and engineering to align on product priorities and drive successful market adoption.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Product Manager, Solultima Technologies</h3>
+                <span class="meta-info">Mar 2019 – Feb 2022</span>
+                <ul>
+                    <li>Led end-to-end product lifecycle for three flagship fintech applications, integrating advanced analytics and predictive features that resulted in a <span class="highlight">15% increase in client satisfaction</span> and a <span class="highlight">20% reduction in financial reporting errors</span>.</li>
+                    <li>Defined product vision, requirements, and roadmaps, collaborating closely with engineering and design teams to ensure timely and impactful delivery.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Senior Consultant – Product & Marketing, Hitachi Technologies</h3>
+                <span class="meta-info">Feb 2018 – Mar 2019</span>
+                <ul>
+                    <li>Orchestrated the implementation of a SaaS training and onboarding program, leveraging innovative digital tools to <span class="highlight">decrease product time-to-market by 25%</span> for key enterprise clients across diverse sectors.</li>
+                    <li>Provided strategic product insights and marketing guidance, influencing product development to enhance market fit and user adoption.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Senior Marketing Manager, FV Bank / PayGlobal / B21Invest</h3>
+                <span class="meta-info">2015 – 2018</span>
+                <ul>
+                    <li>Directed global marketing campaigns across multiple brands, leveraging data-driven automation and rapid prototyping ('vibe coding') to <span class="highlight">increase user engagement by an average of 30%</span> and drive <span class="highlight">20% growth in qualified leads and user acquisition</span>.</li>
+                    <li>Managed multi-channel marketing budgets and strategies, optimizing spend for maximum ROI.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Early Career (Selected Contributions)</h3>
+                <span class="meta-info">Starting 2005 - 2015 (Roles at Google/JLL, DuPont & HSBC)</span>
+                <ul>
+                    <li>Contributed to digital transformation initiatives, optimizing workflow processes that <span class="highlight">improved operational efficiency by 10%</span> (Google/JLL).</li>
+                    <li>Played key roles in procurement and digital innovation projects, leveraging coding-powered solutions to streamline operations and enhance data analysis (DuPont & HSBC).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="technical-ai-skills">
+            <h2>TECHNICAL & AI SKILLS</h2>
+            <div class="skills-grid">
+                <div>
+                    <h4>Product Management</h4>
+                    <ul>
+                        <li>Jira, Confluence, Trello, Miro</li>
+                        <li>Rapid Prototyping (Replit, Lovable, Figma Make)</li>
+                        <li>UI/UX (Figma, Canva)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>AI Agent & LLM Tools</h4>
+                    <ul>
+                        <li>Langflow (Multi-Agent Design, Deployment)</li>
+                        <li>Ollama, OpenAI API</li>
+                        <li>LLM (Prompt Engineering, Model Tuning: top-k, top-p, temperature, RAG)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Analytics & User Insights</h4>
+                    <ul>
+                        <li>Pendo, Salesforce, HubSpot</li>
+                        <li>Google Analytics, Advanced Excel, SQL</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Marketing & Automation</h4>
+                    <ul>
+                        <li>WordPress, Buffer, Hootsuite</li>
+                        <li>Procurement Systems (SAP, Ariba, Coupa)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education-certifications">
+            <h2>EDUCATION & CERTIFICATIONS</h2>
+            <div class="education-item">
+                <h3>MBA (Marketing)</h3>
+                <span class="meta-info">ICFAI University – Dehradun, India (Honors, 80.5%)</span>
+            </div>
+            <div class="education-item">
+                <h3>Bachelor of Computer Applications</h3>
+                <span class="meta-info">Andhra University (Distinction, 80%)</span>
+            </div>
+            <br>
+            <h3>Certifications</h3>
+            <ul>
+                <li>AI Product Management, Institute of Product Leadership (IPL, 2025)</li>
+                <li>Google Ads Certified</li>
+                <li>HubSpot Academy Certified</li>
+                <li>Certified Salesforce Administrator</li>
+            </ul>
+        </section>
+
+        <section id="additional-info">
+            <h2>ADDITIONAL & INTERESTS</h2>
+            <h3>Languages:</h3>
+            <ul>
+                <li>English, Hindi, Telugu</li>
+            </ul>
+            <h3>Recognitions:</h3>
+            <ul>
+                <li>AI Hackathon Winner</li>
+                <li>Project Leadership Awards</li>
+            </ul>
+            <h3>Interests & Hobbies:</h3>
+            <ul>
+                <li>Creative Pursuits: Enjoy pencil sketching, pastel coloring, and karaoke singing.</li>
+                <li>Family & Recreation: Cherish console gaming with my 10-year-old son, watching movies with my spouse, and storytelling to my 5-year-old daughter.</li>
+            </ul>
+        </section>
+
         <footer>
             <p>&copy; 2024 Manoj Varma Uppalapati. All rights reserved.</p>
         </footer>
@@ -291,14 +494,10 @@
 
             tabButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    // Deactivate all buttons and hide all content
                     tabButtons.forEach(btn => btn.classList.remove('active'));
                     tabContents.forEach(content => content.classList.remove('active'));
 
-                    // Activate clicked button
                     button.classList.add('active');
-
-                    // Show corresponding content
                     const targetTabId = button.dataset.tab;
                     document.getElementById(targetTabId).classList.add('active');
                 });
