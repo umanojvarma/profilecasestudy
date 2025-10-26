@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj Varma - Senior Product Leader & AI Specialist</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        header {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+            border-bottom: 8px solid #007bff;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .contact-info a {
+            color: #d1e7ff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        section:last-of-type {
+            border-bottom: none;
+        }
+        h2 {
+            color: #0056b3;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h3 {
+            color: #007bff;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #cfe2ff;
+            padding-bottom: 10px;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        ul li::before {
+            content: '•'; /* Changed from checkmark for general lists */
+            color: #007bff; /* Changed color */
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+        /* Specific styles for Case Studies */
+        .case-studies {
+            padding-top: 0; /* Adjust padding due to header */
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+        .tab-button {
+            background-color: #e9ecef;
+            color: #0056b3;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            margin: 0 5px;
+            position: relative;
+            top: 2px;
+        }
+        .tab-button:hover {
+            background-color: #dee2e6;
+        }
+        .tab-button.active {
+            background-color: #007bff;
+            color: #fff;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+            border-color: #007bff;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        .case-study-section h3 {
+            color: #007bff;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #cfe2ff;
+            padding-bottom: 10px;
+        }
+        .case-study-section p {
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        .case-study-section ul li::before {
+            content: '✓'; /* Changed back to checkmark for case study specifics */
+            color: #28a745;
+        }
+        .impact-highlight {
+            background-color: #e9f7ef;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            color: #218838;
+        }
+        .impact-highlight strong {
+            color: #1a6d2c;
+        }
+
+        .key-tech {
+            margin-top: 25px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .key-tech strong {
+            color: #0056b3;
+            font-size: 1.1em;
+            margin-right: 10px;
+        }
+        .key-tech span {
+            display: inline-block;
+            background-color: #e0f2f7;
+            color: #007bff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+
+        /* General sections */
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            padding-left: 0; /* Reset for general list styling */
+        }
+        .experience-item ul li::before {
+            content: '–';
+            color: #555;
+        }
+        .meta-info {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: -10px; /* Adjust spacing */
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .skills-grid div h4 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .skills-grid ul {
+            margin: 0;
+            padding: 0;
+        }
+        .skills-grid ul li {
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #343a40;
+            color: #adb5bd;
+            font-size: 0.9em;
+            border-top: 5px solid #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MANOJ VARMA UPPALAPATI</h1>
+            <p>Senior Product Leader | AI Product Innovation Specialist</p>
+            <div class="contact-info">
+                <a href="tel:+919966618050">📞 +91 9966618050</a>
+                <a href="mailto:manojuvarma@gmail.com">📧 manojuvarma@gmail.com</a>
+                <a href="https://linkedin.com/in/manoj-varma" target="_blank">🔗 LinkedIn Profile</a>
+            </div>
+        </header>
+
+        <section id="professional-summary">
+            <h2>PROFESSIONAL SUMMARY</h2>
+            <p>Highly accomplished Senior Product Leader with <span class="highlight">19+ years of experience</span> (started 2005) driving innovative, data-driven product strategies and execution for global fintech and HCM platforms. Proven track record in leveraging advanced analytics, user behavior insights (Pendo), and automation to deliver significant business growth, with a strong focus on achieving Product-Market Fit and executing successful Go-to-Market strategies. Complemented by deep expertise in <span class="highlight">Generative AI and multi-agent architectures</span> (developed through personal projects), notably leading the award-winning "TaxEase" AI Hackathon project and building "CompeteBot," an agentic AI solution for competitive analysis. Expert in product lifecycle management, rapid prototyping, and cross-functional leadership in dynamic, high-growth environments.</p>
+        </section>
+
+        <section id="core-competencies">
+            <h2>CORE COMPETENCIES</h2>
+            <div class="skills-grid">
+                <div>
+                    <h4>Product Leadership</h4>
+                    <ul>
+                        <li>Product Strategy & Life Cycle Management</li>
+                        <li>Product-Market Fit (PMF) & Validation</li>
+                        <li>Go-to-Market (GTM) Strategy & Execution</li>
+                        <li>Agile & Lean Delivery</li>
+                        <li>Cross-functional Team Leadership</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>AI & Innovation</h4>
+                    <ul>
+                        <li>Generative AI & Multi-Agent Architecture Design</li>
+                        <li>AI Agent Orchestration (Langflow, Planner/Researcher/Executor Agents)</li>
+                        <li>LLM Model Training & Optimization (Ollama, top-k, top-p, temperature)</li>
+                        <li>Rapid Prototyping & Iteration (Replit, Lovable, Figma Make)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Data & Digital Transformation</h4>
+                    <ul>
+                        <li>Financial Automation & Optimization</li>
+                        <li>Digital Transformation & Platform Strategy</li>
+                        <li>Workflow Automation & Process Optimization</li>
+                        <li>Data-driven Decision Making, User Analytics (Pendo), & Experimentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-studies" id="ai-product-innovation">
+            <h2>AI PRODUCT INNOVATION & ACHIEVEMENTS</h2>
+
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="taxease">TaxEase: AI Tax Filing Assistant</button>
+                <button class="tab-button" data-tab="competebot">CompeteBot: AI Competitive Analysis</button>
+            </div>
+
+            <div id="taxease" class="tab-content active">
+                <div class="case-study-section">
+                    <h3>TaxEase: AI-Powered Tax Filing Assistant (AI Hackathon Winner)</h3>
+                    <p><strong>Problem:</strong> Tax filing is complex, time-consuming, and often leads to missed savings opportunities for individuals.</p>
+                    <p><strong>Solution:</strong> Conceptualized, built, and launched "TaxEase," an AI-powered assistant designed to simplify personal tax filings.</p>
+                    <ul>
+                        <li>Utilizes Natural Language Processing (NLP) to analyze Form 16 and other financial documents.</li>
+                        <li>Identifies potential tax savings, predicts returns, and provides actionable gap analyses.</li>
+                        <li>Showcased innovative application of <span class="highlight">multi-agent architectures (Langflow)</span> for task decomposition.</li>
+                        <li>Demonstrated expertise in LLM tuning and prompt engineering to deliver precise financial guidance.</li>
+                    </ul>
+                    <div class="impact-highlight">
+                        <strong>Impact & Results:</strong>
+                        <p>Recognized for identifying an average of <strong>15-20% in potential savings opportunities</strong> for users. The project validated the potential for market disruption and strong Product-Market Fit through AI-driven financial optimization.</p>
+                    </div>
+                    <div class="key-tech">
+                        <strong>Key Technologies:</strong>
+                        <span>Generative AI</span>
+                        <span>Multi-Agent Architectures (Langflow)</span>
+                        <span>LLM Tuning</span>
+                        <span>Prompt Engineering</span>
+                        <span>Financial Modeling</span>
+                        <span>NLP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="competebot" class="tab-content">
+                <div class="case-study-section">
+                    <h3>CompeteBot: Agentic AI Competitive Analysis Tool</h3>
+                    <p><strong>Problem:</strong> Product managers spend weeks on manual competitive research, resulting in outdated and inefficient intelligence.</p>
+                    <p><strong>Solution:</strong> Designed and developed "CompeteBot," a multi-agent AI system on Langflow that automates and accelerates competitive analysis.</p>
+                    <ul>
+                        <li>Conducted deep unmet needs analysis and persona definition (Senior Product Manager) to ensure Product-Market Fit.</li>
+                        <li>Orchestrated three specialized AI agents: <span class="highlight">Planner, Researcher, and Executor</span> for task decomposition, intelligence gathering from diverse sources (web APIs, documents), and synthesis.</li>
+                        <li>Generates decision-ready outputs including tables, SWOT analyses, and strategic recommendations.</li>
+                        <li>Built with scalable, ethical AI solutions as a core foundation for a robust Go-to-Market strategy.</li>
+                    </ul>
+                    <div class="impact-highlight">
+                        <strong>Impact & Results:</strong>
+                        <p>Achieved an <span class="highlight"><strong>80% reduction in analysis time</strong> (from 2-3 weeks to 2-3 hours)</span> and demonstrated a <span class="highlight"><strong>40% productivity gain</strong></span> for the target persona, delivering consistent, audited results with 95% consistency.</p>
+                    </div>
+                    <div class="key-tech">
+                        <strong>Key Technologies:</strong>
+                        <span>Agentic AI</span>
+                        <span>Multi-Agent System (Langflow)</span>
+                        <span>Web Scraping APIs</span>
+                        <span>Document Analysis</span>
+                        <span>Product-Market Fit</span>
+                        <span>Value Proposition Design</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="professional-experience">
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            <div class="experience-item">
+                <h3>Senior Product Manager, ADP</h3>
+                <span class="meta-info">Mar 2022 – Present | Hyderabad, India</span>
+                <ul>
+                    <li>Led product strategy and roadmap for key payroll and HR platforms impacting millions of users, leveraging Pendo insights to understand user pulse and drive a <span class="highlight">35% operational efficiency boost</span> through advanced feature development and process optimization.</li>
+                    <li>Spearheaded automation initiatives using advanced coding practices, resulting in a significant reduction in manual processing time by X% and improved data accuracy for Y critical HR workflows.</li>
+                    <li>Pioneered data-driven experimentation frameworks to optimize product intelligence, informing key strategic decisions and elevating user engagement by Z% on new features.</li>
+                    <li>Managed complex stakeholder relationships across engineering, sales, sales operations, and engineering to align on product priorities and drive successful market adoption.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Product Manager, Solultima Technologies</h3>
+                <span class="meta-info">Mar 2019 – Feb 2022</span>
+                <ul>
+                    <li>Led end-to-end product lifecycle for three flagship fintech applications, integrating advanced analytics and predictive features that resulted in a <span class="highlight">15% increase in client satisfaction</span> and a <span class="highlight">20% reduction in financial reporting errors</span>.</li>
+                    <li>Defined product vision, requirements, and roadmaps, collaborating closely with engineering and design teams to ensure timely and impactful delivery.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Senior Consultant – Product & Marketing, Hitachi Technologies</h3>
+                <span class="meta-info">Feb 2018 – Mar 2019</span>
+                <ul>
+                    <li>Orchestrated the implementation of a SaaS training and onboarding program, leveraging innovative digital tools to <span class="highlight">decrease product time-to-market by 25%</span> for key enterprise clients across diverse sectors.</li>
+                    <li>Provided strategic product insights and marketing guidance, influencing product development to enhance market fit and user adoption.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Senior Marketing Manager, FV Bank / PayGlobal / B21Invest</h3>
+                <span class="meta-info">2015 – 2018</span>
+                <ul>
+                    <li>Directed global marketing campaigns across multiple brands, leveraging data-driven automation and rapid prototyping ('vibe coding') to <span class="highlight">increase user engagement by an average of 30%</span> and drive <span class="highlight">20% growth in qualified leads and user acquisition</span>.</li>
+                    <li>Managed multi-channel marketing budgets and strategies, optimizing spend for maximum ROI.</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Early Career (Selected Contributions)</h3>
+                <span class="meta-info">Starting 2005 - 2015 (Roles at Google/JLL, DuPont & HSBC)</span>
+                <ul>
+                    <li>Contributed to digital transformation initiatives, optimizing workflow processes that <span class="highlight">improved operational efficiency by 10%</span> (Google/JLL).</li>
+                    <li>Played key roles in procurement and digital innovation projects, leveraging coding-powered solutions to streamline operations and enhance data analysis (DuPont & HSBC).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="technical-ai-skills">
+            <h2>TECHNICAL & AI SKILLS</h2>
+            <div class="skills-grid">
+                <div>
+                    <h4>Product Management</h4>
+                    <ul>
+                        <li>Jira, Confluence, Trello, Miro</li>
+                        <li>Rapid Prototyping (Replit, Lovable, Figma Make)</li>
+                        <li>UI/UX (Figma, Canva)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>AI Agent & LLM Tools</h4>
+                    <ul>
+                        <li>Langflow (Multi-Agent Design, Deployment)</li>
+                        <li>Ollama, OpenAI API</li>
+                        <li>LLM (Prompt Engineering, Model Tuning: top-k, top-p, temperature, RAG)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Analytics & User Insights</h4>
+                    <ul>
+                        <li>Pendo, Salesforce, HubSpot</li>
+                        <li>Google Analytics, Advanced Excel, SQL</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Marketing & Automation</h4>
+                    <ul>
+                        <li>WordPress, Buffer, Hootsuite</li>
+                        <li>Procurement Systems (SAP, Ariba, Coupa)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education-certifications">
+            <h2>EDUCATION & CERTIFICATIONS</h2>
+            <div class="education-item">
+                <h3>MBA (Marketing)</h3>
+                <span class="meta-info">ICFAI University – Dehradun, India (Honors, 80.5%)</span>
+            </div>
+            <div class="education-item">
+                <h3>Bachelor of Computer Applications</h3>
+                <span class="meta-info">Andhra University (Distinction, 80%)</span>
+            </div>
+            <br>
+            <h3>Certifications</h3>
+            <ul>
+                <li>AI Product Management, Institute of Product Leadership (IPL, 2025)</li>
+                <li>Google Ads Certified</li>
+                <li>HubSpot Academy Certified</li>
+                <li>Certified Salesforce Administrator</li>
+            </ul>
+        </section>
+
+        <section id="additional-info">
+            <h2>ADDITIONAL & INTERESTS</h2>
+            <h3>Languages:</h3>
+            <ul>
+                <li>English, Hindi, Telugu</li>
+            </ul>
+            <h3>Recognitions:</h3>
+            <ul>
+                <li>AI Hackathon Winner</li>
+                <li>Project Leadership Awards</li>
+            </ul>
+            <h3>Interests & Hobbies:</h3>
+            <ul>
+                <li>Creative Pursuits: Enjoy pencil sketching, pastel coloring, and karaoke singing.</li>
+                <li>Family & Recreation: Cherish console gaming with my 10-year-old son, watching movies with my spouse, and storytelling to my 5-year-old daughter.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Manoj Varma Uppalapati. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    button.classList.add('active');
+                    const targetTabId = button.dataset.tab;
+                    document.getElementById(targetTabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
